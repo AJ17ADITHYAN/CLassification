@@ -77,6 +77,17 @@ else:
     resized_image = np.expand_dims(resize, 0)
     value = model.predict(np.expand_dims(resize/255 , 0))
     st.write(value)
+data_dir = "C:\Data"
+batch_size=32
+train_ds = tf.keras.preprocessing.image_dataset_from_directory(
+  data_dir,
+  validation_split=0.2,
+  subset="training",
+  seed=123,
+  image_size=(180, 180),
+  batch_size=batch_size)
+class_names = train_ds.class_names
+
     st.write(
     "This image most likely belongs to {} with a {:.2f} percent confidence."
     .format(class_names[np.argmax(value)], 100 * np.max(value))
