@@ -5,7 +5,16 @@ from PIL import Image, ImageOps
 import numpy as np
 import base64
 
-
+data_dir = "C:\Data"
+batch_size=32
+train_ds = tf.keras.preprocessing.image_dataset_from_directory(
+  data_dir,
+  validation_split=0.2,
+  subset="training",
+  seed=123,
+  image_size=(180, 180),
+  batch_size=batch_size)
+class_names = train_ds.class_names
 
 modelpath = 'my_model2.hdf5'
 model = keras.models.load_model(modelpath)
