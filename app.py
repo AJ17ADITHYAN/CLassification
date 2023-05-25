@@ -5,7 +5,7 @@ from PIL import Image, ImageOps
 import numpy as np
 import base64
 
-data_dir = "C:\Data"
+data_dir = "Data"
 batch_size=32
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
   data_dir,
