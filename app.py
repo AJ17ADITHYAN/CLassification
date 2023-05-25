@@ -43,16 +43,6 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Lung Disease Detector")
     # Rest of your Streamlit app code
-data_dir = "C:\Data"
-batch_size=32
-train_ds = tf.keras.preprocessing.image_dataset_from_directory(
-  data_dir,
-  validation_split=0.2,
-  subset="training",
-  seed=123,
-  image_size=(180, 180),
-  batch_size=batch_size)
-class_names = train_ds.class_names
 
 
 
