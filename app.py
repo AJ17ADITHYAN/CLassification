@@ -50,7 +50,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 
-st.title("Lung Disease Detector")
+st.title("Lung Disease Classifier")
     # Rest of your Streamlit app code
 
 
