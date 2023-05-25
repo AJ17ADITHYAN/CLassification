@@ -7,7 +7,7 @@ import base64
 
 
 
-modelpath = r'C:\Users\adith/my_model2.hdf5'
+modelpath = 'my_model2.hdf5'
 model = keras.models.load_model(modelpath)
 
 
